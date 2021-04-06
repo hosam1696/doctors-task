@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-doctor-holder',
@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorHolderComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onTap = new EventEmitter();
 
-  ngOnInit() {}
 
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+  onClick() {
+    // console.log('hey');
+    this.onTap.emit(null);
+  }
 }

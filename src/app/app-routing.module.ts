@@ -12,9 +12,9 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'doctor',
-    loadChildren: () => import('./doctor/doctor.module').then( m => m.DoctorPageModule)
-  },
+    path: 'doctor-page',
+    loadChildren: () => import('./doctor-page/doctor-page.module').then( m => m.DoctorPagePageModule)
+  }
 ];
 
 @NgModule({
